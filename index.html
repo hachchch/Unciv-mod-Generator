@@ -21,6 +21,8 @@
         <textarea class="jsonTexts" id="buildings">Buildings.json will generate here.</textarea><br>
         <input type="button" value="Generate" class="coolButton" onclick="generate('buildings')" />
         </div>
-        <script type="text/javascript" src="./js/main.js"></script>
+        <input type="text" id="wantToRename" placeholder="example(Building1)" />to<input type="text" id="renamedElement" placeholder="example(City Hall)" /><input type="button" value="rename" onclick="rename(document.querySelector('#wantToRename').value,document.querySelector('#renamedElement').value);" /><br>
+        ※It replaces all matching strings, which can lead to unexpected accidents. take care.
+        <script type="text/javascript" src="./main.js"></script>
     </body>
 </html>
