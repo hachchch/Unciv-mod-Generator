@@ -94,3 +94,6 @@ if(type=="buildings"){
     buildings.value+="\n]";
 }
 }
+function rename(a,b){
+    buildings.value=buildings.value.replaceAll(a,b);
+}
