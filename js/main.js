@@ -5,6 +5,11 @@ const buildings=document.querySelector("#buildings");
 let buildingUniqueLists=[];
 buildingUniqueLists[0]="Destroyed when the city is captured";
 buildingUniqueLists[1]="[+1 Food] from [Lakes] tiles [in this city]";
+buildingUniqueLists[2]="New [Military] units start with [15] Experience [in this city]";
+buildingUniqueLists[3]="Must be next to [Coast]";
+buildingUniqueLists[4]="[+1 Production] from [Cattle] tiles [in this city]";
+buildingUniqueLists[5]="Only available <in cities with a [Building3]>";//生成中に変更できるようにしたい。
+buildingUniqueLists[6]="[+1 Food] from [Lakes] tiles [in this city]";
 /*Techsのデータ*/
 let techLists=[];
 /*baseRuleSetを使用する場合*/
@@ -33,7 +38,6 @@ techLists[17]="Drama and Poetry";
 techLists[18]="Currency";
 techLists[19]="Engineering";
 techLists[20]="Iron Working";
-  /*エトセトラ...*/
 }else{
         for(let i=0; i<techLists.length; ++i){
             techLists[i]="Agriculture";
