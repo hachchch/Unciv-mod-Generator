@@ -5,24 +5,26 @@
     </head>
     <style>
         .jsonTexts{
-            width:500px;
+            width:800px;
             height:600px;
         }
         .coolButton{
-            width:500px;
+            width:800px;
             height:30px;
         }
     </style>
     <body>
         test<br>
         use baseRuleSets<input type="checkbox" onclick="useGaK()" /><br>
-        generate length of building element<input type="text" id="buildingsGenerateLength" value="100" />;
+        generate length of building element<input type="text" id="buildingsGenerateLength" value="100" /><br>
+        Max "uniques" length<input type="range" id="maxUniqueLength" value="2" max="9" min="0" />
         <div class="generationPlace">
         <textarea class="jsonTexts" id="buildings">Buildings.json will generate here.</textarea><br>
-        <input type="button" value="Generate" class="coolButton" onclick="generate('buildings')" />
+        <input type="button" value="Generate" class="coolButton" onclick="generate('buildings')" /><br>
+        <input type="button" onclick="copyToClipBoard(buildings.value,document.querySelector('#copyButton'));" value="copyToClipBoard" id="copyButton" />
         </div>
         <input type="text" id="wantToRename" placeholder="example(Building1)" />to<input type="text" id="renamedElement" placeholder="example(City Hall)" /><input type="button" value="rename" onclick="rename(document.querySelector('#wantToRename').value,document.querySelector('#renamedElement').value);" /><br>
         ※It replaces all matching strings, which can lead to unexpected accidents. take care.
-        <script type="text/javascript" src="./main.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
     </body>
 </html>
